@@ -1,0 +1,49 @@
+import random
+
+games = [
+    'Tic Tac Toe',
+    'Hangman',
+    'Memory Match',
+    'Trivia Quiz',
+    'Rock Paper Scissors',
+    'Word Search',
+    'Sudoku',
+    'Maze Solver',
+    'Crossword Puzzle',
+    'Jigsaw Puzzle'
+]
+
+challenges = [
+    'Take a selfie with a stranger',
+    'Write a short poem',
+    'Perform 10 push-ups',
+    'Do a random act of kindness',
+    'Listen to a new song and share your thoughts',
+    'Learn a new word in a foreign language',
+    'Draw a picture of your favorite animal',
+    'Watch a TED talk and share your learnings',
+    'Cook a new recipe',
+    'Write a short story'
+]
+
+def get_random_game():
+    return random.choice(games)
+
+def get_random_challenge():
+    return random.choice(challenges)
+
+def main():
+    while True:
+        user_input = input("Type 'game' for a random game, 'challenge' for a random challenge, or 'quit' to exit: ").lower()
+        if user_input == 'game':
+            print(f"Your random game is: {get_random_game()}")
+        elif user_input == 'challenge':
+            print(f"Your random challenge is: {get_random_challenge()}")
+        elif user_input == 'quit':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid input. Please try again.")
+
+if __name__ == '__main__':
+    main()
